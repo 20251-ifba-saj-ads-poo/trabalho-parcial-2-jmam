@@ -25,7 +25,7 @@ public class CadEstudanteController {
                     txEmail.getText(), 
                     txCPF.getText()*/);
         new Alert(AlertType.INFORMATION, 
-        "Cadastrando Autor:"+novoEstudante.getNome()).showAndWait();
+        "Cadastrando Estudante:"+novoEstudante.getNome()).showAndWait();
         Biblioteca.listaEstudantes.add(novoEstudante);
         limparTela();
     }

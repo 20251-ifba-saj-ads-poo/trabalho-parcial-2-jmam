@@ -1,4 +1,5 @@
 package br.edu.ifba.saj.fwads.FeiraDeCiencia;
+import java.util.ArrayList;
 import java.util.List;
 
 public class Professor extends Usuario{
@@ -8,7 +9,7 @@ public class Professor extends Usuario{
 
     public Professor(String nome, String senha){
         super(nome, senha);
-        projetos=null;
+        projetos=new ArrayList<>();
     }
 
     public List<Projeto> getProjetos(){

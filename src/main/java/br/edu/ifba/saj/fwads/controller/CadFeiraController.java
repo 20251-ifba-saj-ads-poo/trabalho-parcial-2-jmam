@@ -1,19 +1,11 @@
 package br.edu.ifba.saj.fwads.controller;
 
-import br.edu.ifba.saj.fwads.Biblioteca;
-import br.edu.ifba.saj.fwads.model.Autor;
-import br.edu.ifba.saj.fwads.model.Livro;
+import br.edu.ifba.saj.fwads.FeiraDeCiencia.Feira;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.Node;
 import javafx.scene.control.Alert;
-import javafx.scene.control.ChoiceBox;
-import javafx.scene.control.TextField;
 import javafx.scene.control.Alert.AlertType;
-import javafx.scene.layout.Pane;
-import javafx.util.StringConverter;
-import br.edu.ifba.saj.fwads.FeiraDeCiencia.Feira;
-import br.edu.ifba.saj.fwads.FeiraDeCiencia.Projeto;
+import javafx.scene.control.TextField;
 
 
 public class CadFeiraController {
@@ -39,7 +31,7 @@ public class CadFeiraController {
 
     }
 
-    @FXML 
+    /*@FXML 
     private void initialize() {
         slProjeto.setConverter(new StringConverter<Projeto>() {
             @Override
@@ -62,18 +54,18 @@ public class CadFeiraController {
         
         carregarListaProjeto();
     }
-
+*/
     @FXML
     private void limparTela() {
         txTitulo.setText("");
         //txSubTitulo.setText("");
         //txISBN.setText("");
         //Todo REVER
-        slProjeto.setSelectionModel(null);
+        //slProjeto.setSelectionModel(null);
     }
 
-    private void carregarListaProjeto() {
+    /*private void carregarListaProjeto() {
         slProjeto.setItems(Biblioteca.listaProjetos);
-    }
+    }*/
 
 }

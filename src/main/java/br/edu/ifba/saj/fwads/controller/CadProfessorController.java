@@ -19,7 +19,7 @@ public class CadProfessorController {
     private TextField txNome;
 
     @FXML
-    private void salvarAutor() {
+    private void salvarProfessor() {
         Professor novoProfessor = new Professor(txNome.getText(), "admin"
                     /*txEmail.getText(), 
                     txCPF.getText()*/);

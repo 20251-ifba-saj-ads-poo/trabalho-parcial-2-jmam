@@ -13,7 +13,7 @@ public class Feira {
     public Feira(String nome/*, Date data*/){
         this.nome=nome;
         //this.data=data;
-        projetos = new ArrayList<Projeto>();
+        projetos = new ArrayList<>();
     }
 
     public String getNome(){

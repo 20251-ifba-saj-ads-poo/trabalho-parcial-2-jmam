@@ -11,8 +11,8 @@ import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TextField;
 import javafx.util.StringConverter;
 
-public class CadProjetoController {
-    @FXML
+public class ListagemEstudante {
+@FXML
     private TextField txTitulo;
     /*@FXML
     private TextField txSubTitulo;

@@ -31,8 +31,8 @@
             </Label>
          </children></AnchorPane>
    </top>
-   <left>
-      <VBox fx:id="menu" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefHeight="500.0" prefWidth="245.0" styleClass="left" stylesheets="@assets/style.css" BorderPane.alignment="TOP_LEFT">
+   <bottom>
+      <VBox fx:id="menu" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefHeight="500.0" prefWidth="245.0" styleClass="left" stylesheets="@assets/style.css" BorderPane.alignment="CENTER">
          <children>
             <Button alignment="TOP_LEFT" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#showHome" prefHeight="35.0" styleClass="btn-menu-selected" stylesheets="@assets/style.css" text="Home" textFill="WHITE">
                <padding>
@@ -49,7 +49,7 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button alignment="TOP_LEFT" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#showAutores" prefHeight="35.0" styleClass="btn-menu" stylesheets="@assets/style.css" text="Cadastro Aluno" textFill="WHITE">
+            <Button alignment="TOP_LEFT" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#showEstudante" prefHeight="35.0" styleClass="btn-menu" stylesheets="@assets/style.css" text="Cadastro Estudante" textFill="WHITE">
                <padding>
                   <Insets bottom="5.0" left="10.0" />
                </padding>
@@ -64,7 +64,7 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button alignment="TOP_LEFT" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#showAutores" prefHeight="35.0" styleClass="btn-menu" stylesheets="@assets/style.css" text="Cadastro Professor" textFill="WHITE">
+            <Button alignment="TOP_LEFT" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#showProfessor" prefHeight="35.0" styleClass="btn-menu" stylesheets="@assets/style.css" text="Cadastro Professor" textFill="WHITE">
                <padding>
                   <Insets bottom="5.0" left="10.0" />
                </padding>
@@ -79,7 +79,7 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button alignment="TOP_LEFT" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#showLivros" prefHeight="35.0" styleClass="btn-menu" stylesheets="@assets/style.css" text="Cadastro Projeto" textFill="WHITE">
+            <Button alignment="TOP_LEFT" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#showProjeto" prefHeight="35.0" styleClass="btn-menu" stylesheets="@assets/style.css" text="Cadastro Projeto" textFill="WHITE">
                <padding>
                   <Insets bottom="5.0" left="10.0" />
                </padding>
@@ -94,7 +94,7 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button alignment="TOP_LEFT" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#showLivros" prefHeight="35.0" styleClass="btn-menu" stylesheets="@assets/style.css" text="Cadastro Feira" textFill="WHITE">
+            <Button alignment="TOP_LEFT" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#showFeira" prefHeight="35.0" styleClass="btn-menu" stylesheets="@assets/style.css" text="Cadastro Feira" textFill="WHITE">
                <padding>
                   <Insets bottom="5.0" left="10.0" />
                </padding>
@@ -109,7 +109,7 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button alignment="TOP_LEFT" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#showUsuarios" prefHeight="35.0" styleClass="btn-menu" stylesheets="@assets/style.css" text="Listar Alunos" textFill="WHITE">
+            <Button alignment="TOP_LEFT" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#listEstudante" prefHeight="35.0" styleClass="btn-menu" stylesheets="@assets/style.css" text="Listar Estudante" textFill="WHITE">
                <padding>
                   <Insets bottom="5.0" left="10.0" />
                </padding>
@@ -124,7 +124,7 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button alignment="TOP_LEFT" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#showUsuarios" prefHeight="35.0" styleClass="btn-menu" stylesheets="@assets/style.css" text="Listar Professores" textFill="WHITE">
+            <Button alignment="TOP_LEFT" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#listProfessores" prefHeight="35.0" styleClass="btn-menu" stylesheets="@assets/style.css" text="Listar Professores" textFill="WHITE">
                <padding>
                   <Insets bottom="5.0" left="10.0" />
                </padding>
@@ -139,7 +139,7 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button alignment="TOP_LEFT" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#showUsuarios" prefHeight="35.0" styleClass="btn-menu" stylesheets="@assets/style.css" text="Listar Projetos" textFill="WHITE">
+            <Button alignment="TOP_LEFT" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#listProjeto" prefHeight="35.0" styleClass="btn-menu" stylesheets="@assets/style.css" text="Listar Projetos" textFill="WHITE">
                <padding>
                   <Insets bottom="5.0" left="10.0" />
                </padding>
@@ -154,7 +154,7 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button alignment="TOP_LEFT" layoutX="10.0" layoutY="255.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#showUsuarios" prefHeight="35.0" styleClass="btn-menu" stylesheets="@assets/style.css" text="Listar Feiras" textFill="WHITE">
+            <Button alignment="TOP_LEFT" layoutX="10.0" layoutY="255.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#listFeira" prefHeight="35.0" styleClass="btn-menu" stylesheets="@assets/style.css" text="Listar Feiras" textFill="WHITE">
                <padding>
                   <Insets bottom="5.0" left="10.0" />
                </padding>
@@ -170,5 +170,5 @@
                </graphic>
             </Button>
          </children></VBox>
-   </left>
+   </bottom>
 </BorderPane>

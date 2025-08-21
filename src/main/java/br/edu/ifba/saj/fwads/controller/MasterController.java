@@ -5,10 +5,10 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.Label;
-import javafx.scene.control.Alert.AlertType;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
@@ -68,15 +68,46 @@ public class MasterController {
     }
 
     @FXML
-    void showAutores(ActionEvent event) {
+    void showProfessor(ActionEvent event) {
         limparBotoes(event.getSource());
-        showFXMLFile("CadAutor.fxml");
+        showFXMLFile("CadProfessor.fxml");
     }
 
     @FXML
-    void showLivros(ActionEvent event) {
+    void showEstudante(ActionEvent event) {
         limparBotoes(event.getSource());
-        showFXMLFile("CadLivro.fxml");
+        showFXMLFile("CadEstudante.fxml");
+    }
+
+    @FXML
+    void showFeira(ActionEvent event) {
+        limparBotoes(event.getSource());
+        showFXMLFile("CadFeira.fxml");
+    }
+
+    @FXML
+    void showProjeto(ActionEvent event) {
+        limparBotoes(event.getSource());
+        showFXMLFile("CadProjeto.fxml");
+    }
+    @FXML
+    void listEstudante(ActionEvent event) {
+        
+    }
+
+    @FXML
+    void listFeira(ActionEvent event) {
+
+    }
+
+    @FXML
+    void listProfessores(ActionEvent event) {
+
+    }
+
+    @FXML
+    void listProjeto(ActionEvent event) {
+
     }
 
     private void showFXMLFile(String resourceName) {
