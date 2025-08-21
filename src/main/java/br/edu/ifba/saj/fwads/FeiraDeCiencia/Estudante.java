@@ -1,26 +1,25 @@
-
+package br.edu.ifba.saj.fwads.FeiraDeCiencia;
 import java.util.List;
 
 
-public class Estudante extends Usuario{
+public class Estudante extends br.edu.ifba.saj.fwads.FeiraDeCiencia.Usuario{
     
-    protected int estudanteID;
-    protected List<Projeto> projetos;
+    private List<Projeto> projetos;
 
     public Estudante(String nome, String senha) {
         super(nome, senha);
         projetos=null;        
     }
 
-    public List<Projeto> GetProjetos(){
+    public List<Projeto> getProjetos(){
         return List.copyOf(projetos);
     }
 
-    public void AddProjeto(Projeto projeto){
+    public void addProjeto(Projeto projeto){
         projetos.add(projeto);
     }
 
-    public void RemoverProjeto(Projeto projeto){
+    public void removeProjeto(Projeto projeto){
         projetos.remove(projeto);
     }
 

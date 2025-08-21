@@ -12,22 +12,23 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.layout.Pane;
 import javafx.util.StringConverter;
+import main.java.br.edu.ifba.saj.fwads.FeiraDeCiencia.Projeto;
 
-public class CadLivroController {
+public class CadProjetoController {
     @FXML
     private TextField txTitulo;
-    @FXML
+    /*@FXML
     private TextField txSubTitulo;
     @FXML
-    private TextField txISBN;
+    private TextField txISBN;*/
     @FXML
-    private ChoiceBox<Autor> slAutor;
+    private ChoiceBox<Professor> slProfessor;
 
     @FXML
     void salvarLivro(ActionEvent event) {
-        Livro novoLivro = new Livro(txTitulo.getText(),
-                    txSubTitulo.getText(), 
-                    txISBN.getText(),
+        Projeto novoProjeto = new Projeto(txTitulo.getText(),
+                    /*txSubTitulo.getText(), 
+                    txISBN.getText(),*/
                     slAutor.getSelectionModel().getSelectedItem());
         new Alert(AlertType.INFORMATION, 
         "Cadastrando Livro(Fake):"+novoLivro.toString()).showAndWait();
