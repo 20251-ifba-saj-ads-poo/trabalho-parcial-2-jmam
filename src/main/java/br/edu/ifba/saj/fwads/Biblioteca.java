@@ -8,7 +8,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
 public class Biblioteca {
-    public static ObservableList<Professor> listaProfessore = FXCollections.observableArrayList();
+    public static ObservableList<Professor> listaProfessores = FXCollections.observableArrayList();
     public static ObservableList<Estudante> listaEstudantes = FXCollections.observableArrayList();
     public static ObservableList<Projeto> listaProjetos = FXCollections.observableArrayList();
     public static ObservableList<Feira> listaFeiras = FXCollections.observableArrayList();

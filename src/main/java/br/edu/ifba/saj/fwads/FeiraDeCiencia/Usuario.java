@@ -4,18 +4,18 @@ import java.util.UUID;
 public class Usuario extends AbstractModel<UUID>{
     
     private String nome;
-    //private String senha;
+    private String senha;
 
     Usuario(String nome, String senha){
-        //this.setSenha(senha);
+        this.setSenha(senha);
         this.setNome(nome);
     }
 
 
-    /*private void setSenha(String senha){
-        if (senha.length()>=8)
+    private void setSenha(String senha){
+        //if (senha.length()>=8)
             this.senha=senha;
-    }*/
+    }
 
     private void setNome(String nome){
         if (nome.length()>=8)

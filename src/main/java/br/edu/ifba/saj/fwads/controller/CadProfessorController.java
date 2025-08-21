@@ -1,40 +1,38 @@
 package br.edu.ifba.saj.fwads.controller;
 
 import br.edu.ifba.saj.fwads.Biblioteca;
-import br.edu.ifba.saj.fwads.model.Autor;
-import javafx.event.ActionEvent;
+import br.edu.ifba.saj.fwads.FeiraDeCiencia.Professor;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
-import javafx.scene.control.TextField;
 import javafx.scene.control.Alert.AlertType;
-import main.java.br.edu.ifba.saj.fwads.FeiraDeCiencia.Professor;
+import javafx.scene.control.TextField;
 
 public class CadProfessorController {
 
-    @FXML
-    private TextField txCPF;
+    //@FXML
+    //private TextField txCPF;
 
-    @FXML
-    private TextField txEmail;
+    //@FXML
+    //private TextField txEmail;
 
     @FXML
     private TextField txNome;
 
     @FXML
     private void salvarAutor() {
-        Autor novoAutor = new Autor(txNome.getText(),
-                    txEmail.getText(), 
-                    txCPF.getText());
+        Professor novoProfessor = new Professor(txNome.getText(), "admin"
+                    /*txEmail.getText(), 
+                    txCPF.getText()*/);
         new Alert(AlertType.INFORMATION, 
-        "Cadastrando Autor:"+novoAutor.getNome()).showAndWait();
-        Biblioteca.listaAutores.add(novoAutor);
+        "Cadastrando Professor:"+novoProfessor.getNome()).showAndWait();
+        Biblioteca.listaProfessores.add(novoProfessor);
         limparTela();
     }
     @FXML
     private void limparTela() {
         txNome.setText("");
-        txEmail.setText("");
-        txCPF.setText("");
+        //txEmail.setText("");
+        //txCPF.setText("");
     }
 
 }

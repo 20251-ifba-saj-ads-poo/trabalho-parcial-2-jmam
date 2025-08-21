@@ -1,6 +1,7 @@
 package br.edu.ifba.saj.fwads.FeiraDeCiencia;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 
 
@@ -14,7 +15,7 @@ public final class Projeto extends AbstractModel<UUID>{
     public Projeto(String nome, Professor professor){
         this.nome=nome;
         professores= new ArrayList<>();
-        AddProfessor(professor);
+        addProfessor(professor);
     }
 
     public List<Professor> getProfessores(){
@@ -47,6 +48,10 @@ public final class Projeto extends AbstractModel<UUID>{
 
     public void addFeira(Feira feira) {
         this.feira=feira;
+    }
+
+    public String getNome(){
+        return nome;
     }
 
     

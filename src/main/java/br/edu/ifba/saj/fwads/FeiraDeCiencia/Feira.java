@@ -16,7 +16,7 @@ public class Feira {
         projetos = new ArrayList<Projeto>();
     }
 
-    public string getNome(){
+    public String getNome(){
         return nome;
     }
 

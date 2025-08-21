@@ -10,10 +10,10 @@ import javafx.scene.control.TextField;
 
 public class CadEstudanteController {
 
-    @FXML
+/*   @FXML
     private TextField txCPF;
 
-/*@FXML
+@FXML
     private TextField txEmail;
 */
     @FXML
@@ -21,9 +21,9 @@ public class CadEstudanteController {
 
     @FXML
     private void salvarEstudante() {
-        Estudante novoEstudante = new Estudante(txNome.getText(),
-                    /*txEmail.getText(),*/ 
-                    txCPF.getText());
+        Estudante novoEstudante = new Estudante(txNome.getText(), "admin"/*,
+                    txEmail.getText(), 
+                    txCPF.getText()*/);
         new Alert(AlertType.INFORMATION, 
         "Cadastrando Autor:"+novoEstudante.getNome()).showAndWait();
         Biblioteca.listaEstudantes.add(novoEstudante);
@@ -32,8 +32,8 @@ public class CadEstudanteController {
     @FXML
     private void limparTela() {
         txNome.setText("");
-        txEmail.setText("");
-        txCPF.setText("");
+        //txEmail.setText("");
+        //txCPF.setText("");
     }
 
 }

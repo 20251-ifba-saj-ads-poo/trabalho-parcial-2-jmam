@@ -12,7 +12,8 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.layout.Pane;
 import javafx.util.StringConverter;
-import main.java.br.edu.ifba.saj.fwads.FeiraDeCiencia.Feira;
+import br.edu.ifba.saj.fwads.FeiraDeCiencia.Feira;
+import br.edu.ifba.saj.fwads.FeiraDeCiencia.Projeto;
 
 
 public class CadFeiraController {
@@ -40,7 +41,7 @@ public class CadFeiraController {
 
     @FXML 
     private void initialize() {
-        slAutor.setConverter(new StringConverter<Autor>() {
+        slProjeto.setConverter(new StringConverter<Projeto>() {
             @Override
             public String toString(Autor obj) {
                 if (obj != null) {
@@ -65,14 +66,14 @@ public class CadFeiraController {
     @FXML
     private void limparTela() {
         txTitulo.setText("");
-        txSubTitulo.setText("");
-        txISBN.setText("");
+        //txSubTitulo.setText("");
+        //txISBN.setText("");
         //Todo REVER
-        slAutor.setSelectionModel(null);
+        slProjeto.setSelectionModel(null);
     }
 
-    private void carregarListaAutores() {
-        slAutor.setItems(Biblioteca.listaAutores);
+    private void carregarListaProjeto() {
+        slProjeto.setItems(Biblioteca.listaProjeto);
     }
 
 }
