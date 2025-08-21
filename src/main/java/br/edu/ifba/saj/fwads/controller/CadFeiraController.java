@@ -43,9 +43,9 @@ public class CadFeiraController {
     private void initialize() {
         slProjeto.setConverter(new StringConverter<Projeto>() {
             @Override
-            public String toString(Autor obj) {
+            public String toString(Projeto obj) {
                 if (obj != null) {
-                    return obj.getNome() + ":" + obj.getEmail();
+                    return obj.getNome();
                 }
                 return "";
             }
@@ -60,7 +60,7 @@ public class CadFeiraController {
             }
         });
         
-        carregarListaAutores();
+        carregarListaProjeto();
     }
 
     @FXML
@@ -73,7 +73,7 @@ public class CadFeiraController {
     }
 
     private void carregarListaProjeto() {
-        slProjeto.setItems(Biblioteca.listaProjeto);
+        slProjeto.setItems(Biblioteca.listaProjetos);
     }
 
 }

@@ -44,7 +44,7 @@ public class CadProjetoController {
             @Override
             public String toString(Professor obj) {
                 if (obj != null) {
-                    return obj.getNome() + ":" + obj.getEmail();
+                    return obj.getNome();
                 }
                 return "";
             }
