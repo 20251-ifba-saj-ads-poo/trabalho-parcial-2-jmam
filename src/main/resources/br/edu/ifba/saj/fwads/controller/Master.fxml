@@ -31,7 +31,7 @@
             </Label>
          </children></AnchorPane>
    </top>
-   <bottom>
+   <left>
       <VBox fx:id="menu" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefHeight="500.0" prefWidth="245.0" styleClass="left" stylesheets="@assets/style.css" BorderPane.alignment="CENTER">
          <children>
             <Button alignment="TOP_LEFT" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#showHome" prefHeight="35.0" styleClass="btn-menu-selected" stylesheets="@assets/style.css" text="Home" textFill="WHITE">
@@ -170,5 +170,5 @@
                </graphic>
             </Button>
          </children></VBox>
-   </bottom>
+   </left>
 </BorderPane>
