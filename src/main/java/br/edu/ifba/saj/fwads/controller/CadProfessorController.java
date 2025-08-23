@@ -20,13 +20,16 @@ public class CadProfessorController {
 
     @FXML
     private void salvarProfessor() {
-        Professor novoProfessor = new Professor(txNome.getText(), "admin"
-                    /*txEmail.getText(), 
-                    txCPF.getText()*/);
-        new Alert(AlertType.INFORMATION, 
-        "Cadastrando Professor:"+novoProfessor.getNome()).showAndWait();
-        Biblioteca.listaProfessores.add(novoProfessor);
-        limparTela();
+
+            Professor novoProfessor = new Professor(txNome.getText(), "admin"
+                        /*txEmail.getText(), 
+                        txCPF.getText()*/);
+            new Alert(AlertType.INFORMATION, 
+            "Cadastrando Professor:"+novoProfessor.getNome()).showAndWait();
+            Biblioteca.listaProfessores.add(novoProfessor);
+            limparTela();
+            
+        
     }
     @FXML
     private void limparTela() {

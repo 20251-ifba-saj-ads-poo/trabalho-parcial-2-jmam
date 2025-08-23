@@ -23,13 +23,15 @@ public class CadProjetoController {
 
     @FXML
     void salvarProjeto(ActionEvent event) {
-        Projeto novoProjeto = new Projeto(txTitulo.getText(),
-                    /*txSubTitulo.getText(), 
-                    txISBN.getText(),*/
-                    slProfessor.getSelectionModel().getSelectedItem());
-        new Alert(AlertType.INFORMATION, 
-        "Cadastrando Projeto(Fake):"+novoProjeto.toString()).showAndWait();
-        limparTela();
+        try {
+            Projeto novoProjeto = new Projeto(txTitulo.getText(), slProfessor.getSelectionModel().getSelectedItem());
+            new Alert(AlertType.INFORMATION, "Cadastrando Projeto(Fake):"+novoProjeto.toString()).showAndWait();
+            limparTela();
+            
+        } catch (Exception e) {
+            // TODO: handle exception
+            e.printStackTrace();
+        }
       
 
     }
@@ -55,7 +57,7 @@ public class CadProjetoController {
             }
         });
         
-        carregarListaAutores();
+        carregarListaProfessores();
     }
 
     @FXML
@@ -67,7 +69,7 @@ public class CadProjetoController {
         slProfessor.setSelectionModel(null);
     }
 
-    private void carregarListaAutores() {
+    private void carregarListaProfessores() {
         slProfessor.setItems(Biblioteca.listaProfessores);
     }
 

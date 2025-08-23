@@ -8,7 +8,7 @@ import java.util.UUID;
 public final class Projeto extends AbstractModel<UUID>{
     
     private String nome;
-    private List<Professor> professores;
+    private ArrayList<Professor> professores;
     private List<Estudante> estudantes;
     private Feira feira;
 
@@ -52,6 +52,10 @@ public final class Projeto extends AbstractModel<UUID>{
 
     public String getNome(){
         return nome;
+    }
+
+    public String getLider(){
+        return professores.get(0).getNome();
     }
 
     

@@ -18,7 +18,7 @@ public class Usuario extends AbstractModel<UUID>{
     }
 
     private void setNome(String nome){
-        if (nome.length()>=8)
+        //if (nome.length()>=8)
             this.nome=nome;
     }
 

@@ -92,21 +92,26 @@ public class MasterController {
     }
     @FXML
     void listEstudante(ActionEvent event) {
-        
+        limparBotoes(event.getSource());
+        showFXMLFile("ListEstudante.fxml");
     }
 
     @FXML
     void listFeira(ActionEvent event) {
-
+        limparBotoes(event.getSource());
+        showFXMLFile("ListFeira.fxml");
     }
 
     @FXML
     void listProfessores(ActionEvent event) {
-
+        limparBotoes(event.getSource());
+        showFXMLFile("ListProfessores.fxml");
     }
 
     @FXML
     void listProjeto(ActionEvent event) {
+        limparBotoes(event.getSource());
+        showFXMLFile("ListProjeto.fxml");
 
     }
 
