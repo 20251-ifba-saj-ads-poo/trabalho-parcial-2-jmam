@@ -1,15 +1,18 @@
 package br.edu.ifba.saj.fwads.controller;
-import javafx.scene.control.ChoiceBox;
 import br.edu.ifba.saj.fwads.Biblioteca;
 import br.edu.ifba.saj.fwads.FeiraDeCiencia.Estudante;
-import br.edu.ifba.saj.fwads.FeiraDeCiencia.Professor;
 import javafx.fxml.FXML;
+import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
 import javafx.util.StringConverter;
 
 public class ListEstudanteController {
     @FXML
     private ChoiceBox<Estudante> ListEstudante;
+    
+    @FXML
+    private ListView<Estudante> ListarEstudante;
 
     @FXML 
     private void initialize() {
@@ -20,20 +23,29 @@ public class ListEstudanteController {
                     return obj.getNome();
                 }
                 return "";
-            }
-
+            }           
             @Override
             public Estudante fromString(String stringEstudante) {
                 return Biblioteca.listaEstudantes
-                    .stream()
+                .stream()
                     .filter(estudante -> stringEstudante.equals(estudante.getNome()))
                     .findAny()
                     .orElse(null);                
-            }
-        });
-        
-        carregarListaEstudantes();
-    }
+                }
+            });
+
+            ListarEstudante.setCellFactory(lv -> new ListCell<Estudante>() {
+                @Override
+                public void updateItem(Estudante row, boolean empty) {
+                    super.updateItem(row, empty) ;
+                    setText(empty ? null : row.getNome());
+                }
+                
+                Estudante estudante = ListarEstudante.getSelectionModel().getSelectedItem();
+            });            
+            
+            carregarListaEstudantes();
+        }
 
     @FXML
     private void limparTela() {
@@ -45,5 +57,6 @@ public class ListEstudanteController {
     }
     private void carregarListaEstudantes() {
         ListEstudante.setItems(Biblioteca.listaEstudantes);
+        ListarEstudante.setItems(Biblioteca.listaEstudantes);
     }
 }

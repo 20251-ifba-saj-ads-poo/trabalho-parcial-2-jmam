@@ -1,15 +1,19 @@
 package br.edu.ifba.saj.fwads.controller;
 
 import br.edu.ifba.saj.fwads.Biblioteca;
-
 import br.edu.ifba.saj.fwads.FeiraDeCiencia.Projeto;
 import javafx.fxml.FXML;
 import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.ListCell;
+import javafx.scene.control.ListView;
 import javafx.util.StringConverter;
 
 public class ListProjetoController {
     @FXML
     private ChoiceBox<Projeto> ListProjeto;
+
+    @FXML
+    private ListView<Projeto> ListarProjeto;
 
     @FXML 
     private void initialize() {
@@ -31,6 +35,16 @@ public class ListProjetoController {
                     .orElse(null);                
             }
         });
+
+        ListarProjeto.setCellFactory(lv -> new ListCell<Projeto>() {
+                @Override
+                public void updateItem(Projeto row, boolean empty) {
+                    super.updateItem(row, empty) ;
+                    setText(empty ? null : row.getNome() + "- Líder:"+ row.getLider());
+                }
+                
+                Projeto projeto = ListarProjeto.getSelectionModel().getSelectedItem();
+            });
         
         carregarListaProjeto();
     }
@@ -45,6 +59,7 @@ public class ListProjetoController {
 
     private void carregarListaProjeto() {
         ListProjeto.setItems(Biblioteca.listaProjetos);
+        ListarProjeto.setItems(Biblioteca.listaProjetos);
     }
 }
 

@@ -24,8 +24,7 @@ public class CadProfessorController {
             Professor novoProfessor = new Professor(txNome.getText(), "admin"
                         /*txEmail.getText(), 
                         txCPF.getText()*/);
-            new Alert(AlertType.INFORMATION, 
-            "Cadastrando Professor:"+novoProfessor.getNome()).showAndWait();
+            new Alert(AlertType.INFORMATION,"Cadastrando Professor:"+novoProfessor.getNome()).showAndWait();
             Biblioteca.listaProfessores.add(novoProfessor);
             limparTela();
             

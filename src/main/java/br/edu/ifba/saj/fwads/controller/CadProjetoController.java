@@ -23,15 +23,12 @@ public class CadProjetoController {
 
     @FXML
     void salvarProjeto(ActionEvent event) {
-        try {
+        
             Projeto novoProjeto = new Projeto(txTitulo.getText(), slProfessor.getSelectionModel().getSelectedItem());
             new Alert(AlertType.INFORMATION, "Cadastrando Projeto(Fake):"+novoProjeto.toString()).showAndWait();
+            Biblioteca.listaProjetos.add(novoProjeto);
             limparTela();
             
-        } catch (Exception e) {
-            // TODO: handle exception
-            e.printStackTrace();
-        }
       
 
     }

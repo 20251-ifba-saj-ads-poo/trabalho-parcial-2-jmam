@@ -9,13 +9,15 @@ public final class Projeto extends AbstractModel<UUID>{
     
     private String nome;
     private ArrayList<Professor> professores;
+    private Professor lider;
     private List<Estudante> estudantes;
     private Feira feira;
 
     public Projeto(String nome, Professor professor){
         this.nome=nome;
-        professores= new ArrayList<>();
+        this.professores= new ArrayList<>();
         addProfessor(professor);
+        this.lider=professor;
     }
 
     public List<Professor> getProfessores(){
@@ -55,7 +57,7 @@ public final class Projeto extends AbstractModel<UUID>{
     }
 
     public String getLider(){
-        return professores.get(0).getNome();
+        return lider.getNome();
     }
 
     

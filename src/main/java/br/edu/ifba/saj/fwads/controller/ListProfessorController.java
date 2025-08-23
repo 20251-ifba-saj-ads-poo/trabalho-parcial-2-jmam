@@ -1,14 +1,20 @@
 package br.edu.ifba.saj.fwads.controller;
 
 import br.edu.ifba.saj.fwads.Biblioteca;
+
 import br.edu.ifba.saj.fwads.FeiraDeCiencia.Professor;
 import javafx.fxml.FXML;
 import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.ListCell;
+import javafx.scene.control.ListView;
 import javafx.util.StringConverter;
 
 public class ListProfessorController {
 @FXML
     private ChoiceBox<Professor> ListProfessor;
+
+    @FXML
+    private ListView<Professor> ListarProfessor;
 
     @FXML 
     private void initialize() {
@@ -30,8 +36,17 @@ public class ListProfessorController {
                     .orElse(null);                
             }
         });
-        
-        carregarListaProfessor();
+        ListarProfessor.setCellFactory(lv ->new ListCell<Professor>() {
+                @Override
+                public void updateItem(Professor row, boolean empty) {
+                    super.updateItem(row, empty) ;
+                    setText(empty ? null : row.getNome());
+                }
+                
+                Professor professor = ListarProfessor.getSelectionModel().getSelectedItem();
+            });            
+            
+            carregarListaProfessor();
     }
 
     @FXML
@@ -45,5 +60,6 @@ public class ListProfessorController {
 
     private void carregarListaProfessor() {
         ListProfessor.setItems(Biblioteca.listaProfessores);
+        ListarProfessor.setItems(Biblioteca.listaProfessores);
     }
 }
