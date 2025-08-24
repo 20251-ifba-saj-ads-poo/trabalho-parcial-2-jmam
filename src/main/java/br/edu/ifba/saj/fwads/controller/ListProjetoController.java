@@ -2,6 +2,7 @@ package br.edu.ifba.saj.fwads.controller;
 
 import br.edu.ifba.saj.fwads.Biblioteca;
 import br.edu.ifba.saj.fwads.FeiraDeCiencia.Projeto;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.ListCell;
@@ -47,6 +48,11 @@ public class ListProjetoController {
             });
         
         carregarListaProjeto();
+    }
+
+     @FXML
+    void SelectProjeto(ActionEvent event) {
+
     }
     @FXML
     private void limparTela() {

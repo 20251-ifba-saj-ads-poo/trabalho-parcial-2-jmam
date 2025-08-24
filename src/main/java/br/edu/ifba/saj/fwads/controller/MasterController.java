@@ -105,7 +105,7 @@ public class MasterController {
     @FXML
     void listProfessores(ActionEvent event) {
         limparBotoes(event.getSource());
-        showFXMLFile("ListProfessores.fxml");
+        showFXMLFile("ListProfessor.fxml");
     }
 
     @FXML

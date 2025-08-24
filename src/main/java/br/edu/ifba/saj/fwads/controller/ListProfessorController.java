@@ -1,24 +1,21 @@
 package br.edu.ifba.saj.fwads.controller;
 
 import br.edu.ifba.saj.fwads.Biblioteca;
-
 import br.edu.ifba.saj.fwads.FeiraDeCiencia.Professor;
 import javafx.fxml.FXML;
-import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
-import javafx.util.StringConverter;
 
 public class ListProfessorController {
-@FXML
-    private ChoiceBox<Professor> ListProfessor;
+    //@FXML
+    //private ChoiceBox<Professor> ListProfessor;
 
     @FXML
     private ListView<Professor> ListarProfessor;
 
     @FXML 
     private void initialize() {
-        ListProfessor.setConverter(new StringConverter<Professor>() {
+        /*ListProfessor.setConverter(new StringConverter<Professor>() {
             @Override
             public String toString(Professor obj) {
                 if (obj != null) {
@@ -35,7 +32,7 @@ public class ListProfessorController {
                     .findAny()
                     .orElse(null);                
             }
-        });
+        });*/
         ListarProfessor.setCellFactory(lv ->new ListCell<Professor>() {
                 @Override
                 public void updateItem(Professor row, boolean empty) {
@@ -49,17 +46,11 @@ public class ListProfessorController {
             carregarListaProfessor();
     }
 
-    @FXML
-    private void limparTela() {
-        //txTitulo.setText("");
-        //txSubTitulo.setText("");
-        //txISBN.setText("");
-        //Todo REVER
-        ListProfessor.setSelectionModel(null);
-    }
+
+
 
     private void carregarListaProfessor() {
-        ListProfessor.setItems(Biblioteca.listaProfessores);
+        //ListProfessor.setItems(Biblioteca.listaProfessores);
         ListarProfessor.setItems(Biblioteca.listaProfessores);
     }
 }

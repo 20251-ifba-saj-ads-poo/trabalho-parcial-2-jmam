@@ -2,21 +2,19 @@ package br.edu.ifba.saj.fwads.controller;
 import br.edu.ifba.saj.fwads.Biblioteca;
 import br.edu.ifba.saj.fwads.FeiraDeCiencia.Estudante;
 import javafx.fxml.FXML;
-import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
-import javafx.util.StringConverter;
 
 public class ListEstudanteController {
-    @FXML
-    private ChoiceBox<Estudante> ListEstudante;
+    //@FXML
+    //private ChoiceBox<Estudante> ListEstudante;
     
     @FXML
     private ListView<Estudante> ListarEstudante;
 
     @FXML 
     private void initialize() {
-        ListEstudante.setConverter(new StringConverter<Estudante>() {
+        /*ListEstudante.setConverter(new StringConverter<Estudante>() {
             @Override
             public String toString(Estudante obj) {
                 if (obj != null) {
@@ -32,7 +30,7 @@ public class ListEstudanteController {
                     .findAny()
                     .orElse(null);                
                 }
-            });
+            });*/
 
             ListarEstudante.setCellFactory(lv -> new ListCell<Estudante>() {
                 @Override
@@ -53,10 +51,11 @@ public class ListEstudanteController {
         //txSubTitulo.setText("");
         //txISBN.setText("");
         //Todo REVER
-        ListEstudante.setSelectionModel(null);
+        //ListEstudante.setSelectionModel(null);
     }
     private void carregarListaEstudantes() {
-        ListEstudante.setItems(Biblioteca.listaEstudantes);
+        //ListEstudante.setItems(Biblioteca.listaEstudantes);
         ListarEstudante.setItems(Biblioteca.listaEstudantes);
     }
+    
 }

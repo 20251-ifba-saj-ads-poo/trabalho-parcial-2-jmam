@@ -16,6 +16,7 @@ public final class Projeto extends AbstractModel<UUID>{
     public Projeto(String nome, Professor professor){
         this.nome=nome;
         this.professores= new ArrayList<>();
+        this.estudantes= new ArrayList<>();
         addProfessor(professor);
         this.lider=professor;
     }

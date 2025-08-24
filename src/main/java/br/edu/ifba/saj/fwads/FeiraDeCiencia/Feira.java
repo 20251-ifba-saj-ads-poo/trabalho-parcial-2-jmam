@@ -1,10 +1,11 @@
 package br.edu.ifba.saj.fwads.FeiraDeCiencia;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.UUID;
 
 
 
-public class Feira {
+public class Feira extends AbstractModel<UUID> {
     
     private String nome;
     private Date data;

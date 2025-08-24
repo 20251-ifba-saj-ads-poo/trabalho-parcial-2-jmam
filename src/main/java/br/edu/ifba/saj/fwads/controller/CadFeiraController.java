@@ -1,5 +1,6 @@
 package br.edu.ifba.saj.fwads.controller;
 
+import br.edu.ifba.saj.fwads.Biblioteca;
 import br.edu.ifba.saj.fwads.FeiraDeCiencia.Feira;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -10,7 +11,7 @@ import javafx.scene.control.TextField;
 
 public class CadFeiraController {
     @FXML
-    private TextField txTitulo;
+    private TextField txNome;
 /*@FXML
     private TextField txSubTitulo;
     @FXML
@@ -19,13 +20,10 @@ public class CadFeiraController {
     private ChoiceBox<Autor> slAutor;*/
 
     @FXML
-    void salvarFeira(ActionEvent event) {
-        Feira novaFeira = new Feira(txTitulo.getText()/*,
-                    txSubTitulo.getText(), 
-                    txISBN.getText(),
-                    slAutor.getSelectionModel().getSelectedItem()*/);
-        new Alert(AlertType.INFORMATION, 
-        "Cadastrando Feira(Fake):"+novaFeira.toString()).showAndWait();
+    private void salvarFeira(ActionEvent event) {
+        Feira novaFeira = new Feira(txNome.getText());
+        new Alert(AlertType.INFORMATION, "Cadastrando Feira(Fake):"+novaFeira.toString()).showAndWait();
+        Biblioteca.listaFeiras.add(novaFeira);
         limparTela();
       
 
@@ -57,7 +55,7 @@ public class CadFeiraController {
 */
     @FXML
     private void limparTela() {
-        txTitulo.setText("");
+        txNome.setText("");
         //txSubTitulo.setText("");
         //txISBN.setText("");
         //Todo REVER
