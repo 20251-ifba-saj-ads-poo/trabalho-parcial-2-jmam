@@ -16,6 +16,12 @@ public class ListProjetoController {
     @FXML
     private ListView<Projeto> ListarProjeto;
 
+    private MasterController masterController;
+
+    public void setMasterController(MasterController masterController){
+        this.masterController = masterController;
+    }
+    
     @FXML 
     private void initialize() {
         ListProjeto.setConverter(new StringConverter<Projeto>() {

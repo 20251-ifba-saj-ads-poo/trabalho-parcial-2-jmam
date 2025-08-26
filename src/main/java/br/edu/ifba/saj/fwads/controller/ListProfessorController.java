@@ -13,6 +13,11 @@ public class ListProfessorController {
     @FXML
     private ListView<Professor> ListarProfessor;
 
+    private MasterController masterController;
+
+    public void setMasterController(MasterController masterController){
+        this.masterController = masterController;
+    }
     @FXML 
     private void initialize() {
         /*ListProfessor.setConverter(new StringConverter<Professor>() {

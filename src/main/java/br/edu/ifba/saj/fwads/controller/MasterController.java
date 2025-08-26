@@ -18,7 +18,7 @@ import javafx.scene.shape.Circle;
 public class MasterController {
 
     @FXML
-    private BorderPane masterPane;
+    static BorderPane masterPane;
 
     @FXML
     private VBox menu;
@@ -93,7 +93,9 @@ public class MasterController {
     @FXML
     void listEstudante(ActionEvent event) {
         limparBotoes(event.getSource());
-        showFXMLFile("ListEstudante.fxml");
+        showEstudante(event); showFXMLFile("ListEstudante.fxml");
+        ListEstudanteController.setMasterController(this);
+    }
     }
 
     @FXML
@@ -114,6 +116,8 @@ public class MasterController {
         showFXMLFile("ListProjeto.fxml");
 
     }
+
+
 
     private void showFXMLFile(String resourceName) {
         try {            

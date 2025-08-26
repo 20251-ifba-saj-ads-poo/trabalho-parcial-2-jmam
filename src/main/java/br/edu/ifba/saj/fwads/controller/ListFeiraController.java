@@ -9,17 +9,20 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
-import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
 
 public class ListFeiraController {
     
-    @FXML
-    private BorderPane masterPane;
-        
+       
     @FXML
     private ListView<Feira> ListarFeira;
     
+    private MasterController masterController;
+
+    public void setMasterController(MasterController masterController){
+        this.masterController = masterController;
+    }
+
     @FXML 
     private void initialize() {
         /*ListFeira.setConverter(new StringConverter<Feira>() {
@@ -78,7 +81,7 @@ public class ListFeiraController {
     private void showFXMLFile(String resourceName) {
         try {            
             Pane fxmlCarregado = FXMLLoader.load(getClass().getResource(resourceName));
-            masterPane.setCenter(fxmlCarregado);
+            masterController.masterPane.setCenter(fxmlCarregado);
         } catch (Exception e) {
             new Alert(AlertType.ERROR, "Erro ao carregar o arquivo " + resourceName).showAndWait();
             e.printStackTrace();
