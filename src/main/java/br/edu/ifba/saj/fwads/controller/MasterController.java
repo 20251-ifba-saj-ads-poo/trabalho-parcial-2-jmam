@@ -18,7 +18,7 @@ import javafx.scene.shape.Circle;
 public class MasterController {
 
     @FXML
-    static BorderPane masterPane;
+    private BorderPane masterPane;
 
     @FXML
     private VBox menu;

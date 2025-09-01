@@ -12,7 +12,7 @@ public class ListEstudanteController {
     @FXML
     private ListView<Estudante> ListarEstudante;
 
-    private static MasterController masterController;
+    private MasterController masterController;
 
     public void setMasterController(MasterController masterController){
         this.masterController = masterController;
